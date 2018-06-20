@@ -1,0 +1,41 @@
+<!-- You can list out 151 images or you can use a for loop (use a for loop).  If the images load slowly, consider only loading 15 images. 
+
+    <img src="http://pokeapi.co/media/img/1.png">
+    <img src="http://pokeapi.co/media/img/2.png">
+    <img src="http://pokeapi.co/media/img/3.png">
+    <img src="http://pokeapi.co/media/img/4.png">
+    <img src="http://pokeapi.co/media/img/5.png">    
+Note: These images are hot-linked and may not work. Utilize the api v2 to find a sprite image that you can use to display the pokemon!  -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The OG Pokemon</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        for(var y = 1; y<=151; y++){
+          var source = "http://pokeapi.co/media/img/" + y + ".png"
+          $("#images").append("<img src = '" + source + "'alt='pokémon'>");
+        }
+      });
+    </script>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+      h1, p{
+        font-family: 'Gloria Hallelujah', cursive;
+        text-align: center;
+      }
+      img{
+        width: 100px;
+        margin: 10px 10px 10px 45px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The Original Pokémon [#1 to #151]</h1>
+    <p>Below you will find all the original pokémon from the very first to the one-hundred-fiftieth!</p>
+    <div id="images">
+    </div>
+  </body>
+</html>
